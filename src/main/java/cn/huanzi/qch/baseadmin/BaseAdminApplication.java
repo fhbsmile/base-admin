@@ -10,6 +10,8 @@ import cn.huanzi.qch.baseadmin.sys.sysuser.vo.SysUserVo;
 import cn.huanzi.qch.baseadmin.sys.sysusermenu.service.SysUserMenuService;
 import cn.huanzi.qch.baseadmin.util.*;
 import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
@@ -28,6 +30,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -52,12 +57,12 @@ public class BaseAdminApplication {
     }
 }
 
-@Slf4j
+//@Slf4j
 @Controller
 @RequestMapping("/")
 @Configuration
 class IndexController {
-
+	private static final Logger log = getLogger(IndexController.class);
     @Autowired
     private SysUserService sysUserService;
 

@@ -7,6 +7,8 @@ import oshi.SystemInfo;
 import oshi.hardware.HWDiskStore;
 import oshi.hardware.HardwareAbstractionLayer;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,12 +19,14 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+
 /**
  * 系统环境监控工具类
  */
-@Slf4j
+//@Slf4j
 public class SystemMonitorUtil {
-
+	private static final Logger log = getLogger(SystemMonitorUtil.class);
     private static SystemInfo systemInfo = new SystemInfo();
     private static MonitorVo monitorVo = new MonitorVo();
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

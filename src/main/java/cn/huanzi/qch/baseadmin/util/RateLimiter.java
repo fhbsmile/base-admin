@@ -1,15 +1,19 @@
 package cn.huanzi.qch.baseadmin.util;
 
 import lombok.extern.slf4j.Slf4j;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
+import org.slf4j.Logger;
 import org.springframework.scheduling.annotation.Async;
 
 /**
  * 简单的令牌桶限流
  * 在SpringCloud分布式下实现限流，需要把令牌桶的维护放到一个公共的地方，比如Zuul路由，另外，guava里有现成的基于令牌桶的限流实现。
  */
-@Slf4j
+//@Slf4j
 public class RateLimiter {
-
+	private static final Logger log = getLogger(RateLimiter.class);
     /**
      * 桶的大小
      */

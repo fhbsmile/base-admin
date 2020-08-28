@@ -1,9 +1,12 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.commons.beanutils.BeanMap;
+import org.slf4j.Logger;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
+
+import static org.slf4j.LoggerFactory.getLogger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +14,9 @@ import java.util.List;
 /**
  * 实体转换工具
  */
-@Slf4j
+//@Slf4j
 public class CopyUtil {
-
+	private static final Logger log = getLogger(CopyUtil.class);
     /**
      * 类型转换：实体Vo <->实体  例如：UserVo <-> User
      * 支持一级复杂对象复制

@@ -4,7 +4,7 @@ import cn.huanzi.qch.baseadmin. common.pojo.PageCondition;import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-@Data
+//@Data
 public class SysSettingVo extends PageCondition implements Serializable {
     private String id;//表id
 
@@ -25,5 +25,87 @@ public class SysSettingVo extends PageCondition implements Serializable {
     private Date updateTime;//修改时间
 
     private String userInitPassword;//用户管理：初始、重置密码
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getSysName() {
+		return sysName;
+	}
+
+	public void setSysName(String sysName) {
+		this.sysName = sysName;
+	}
+
+	public String getSysLogo() {
+		return sysLogo;
+	}
+
+	public void setSysLogo(String sysLogo) {
+		this.sysLogo = sysLogo;
+	}
+
+	public String getSysBottomText() {
+		return sysBottomText;
+	}
+
+	public void setSysBottomText(String sysBottomText) {
+		this.sysBottomText = sysBottomText;
+	}
+
+	public String getSysColor() {
+		return sysColor;
+	}
+
+	public void setSysColor(String sysColor) {
+		this.sysColor = sysColor;
+	}
+
+	public String getSysNoticeText() {
+		return sysNoticeText;
+	}
+
+	public void setSysNoticeText(String sysNoticeText) {
+		this.sysNoticeText = sysNoticeText;
+	}
+
+	public String getSysApiEncrypt() {
+		return sysApiEncrypt;
+	}
+
+	public void setSysApiEncrypt(String sysApiEncrypt) {
+		this.sysApiEncrypt = sysApiEncrypt;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getUserInitPassword() {
+		return userInitPassword;
+	}
+
+	public void setUserInitPassword(String userInitPassword) {
+		this.userInitPassword = userInitPassword;
+	}
+    
+    
 
 }

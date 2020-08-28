@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 /**
  * 分页条件（参考JqGrid插件）
  */
-@Data
+//@Data
 public class PageCondition {
     private int page = 1;//当前页码
     private int rows = 10;//页面大小
@@ -28,4 +28,38 @@ public class PageCondition {
         }
         return PageRequest.of(page - 1, rows);
     }
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getRows() {
+		return rows;
+	}
+
+	public void setRows(int rows) {
+		this.rows = rows;
+	}
+
+	public String getSidx() {
+		return sidx;
+	}
+
+	public void setSidx(String sidx) {
+		this.sidx = sidx;
+	}
+
+	public String getSord() {
+		return sord;
+	}
+
+	public void setSord(String sord) {
+		this.sord = sord;
+	}
+    
+    
 }

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 分页对象（参考JqGrid插件）
  */
-@Data
+//@Data
 public class PageInfo<M> {
     private int page;//当前页码
     private int pageSize;//页面大小
@@ -64,4 +64,62 @@ public class PageInfo<M> {
         }
         return total;
     }
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public String getSidx() {
+		return sidx;
+	}
+
+	public void setSidx(String sidx) {
+		this.sidx = sidx;
+	}
+
+	public String getSord() {
+		return sord;
+	}
+
+	public void setSord(String sord) {
+		this.sord = sord;
+	}
+
+	public List<M> getRows() {
+		return rows;
+	}
+
+	public void setRows(List<M> rows) {
+		this.rows = rows;
+	}
+
+	public int getRecords() {
+		return records;
+	}
+
+	public void setRecords(int records) {
+		this.records = records;
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+    
+    
 }

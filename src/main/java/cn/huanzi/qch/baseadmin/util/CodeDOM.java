@@ -2,6 +2,8 @@ package cn.huanzi.qch.baseadmin.util;
 
 import lombok.extern.slf4j.Slf4j;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -9,12 +11,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+
 /**
  * 自动生成代码
  */
-@Slf4j
+//@Slf4j
 public class CodeDOM {
-
+	private static final Logger log = getLogger(CodeDOM.class);
     /**
      * 构造参数，出入表名
      */

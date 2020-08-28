@@ -25,4 +25,52 @@ public class SysMenu implements Serializable {
 
     private Date updateTime;//修改时间
 
+	public String getMenuId() {
+		return menuId;
+	}
+
+	public void setMenuId(String menuId) {
+		this.menuId = menuId;
+	}
+
+	public String getMenuName() {
+		return menuName;
+	}
+
+	public void setMenuName(String menuName) {
+		this.menuName = menuName;
+	}
+
+	public String getMenuPath() {
+		return menuPath;
+	}
+
+	public void setMenuPath(String menuPath) {
+		this.menuPath = menuPath;
+	}
+
+	public String getMenuParentId() {
+		return menuParentId;
+	}
+
+	public void setMenuParentId(String menuParentId) {
+		this.menuParentId = menuParentId;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
 }

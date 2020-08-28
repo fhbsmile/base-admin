@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "sys_user_authority")
-@Data
+
 public class SysUserAuthority implements Serializable {
     @Id
     private String userAuthorityId;//用户权限表id
@@ -34,4 +34,62 @@ public class SysUserAuthority implements Serializable {
     @JoinColumn(name = "authorityId",referencedColumnName = "authorityId", insertable = false, updatable = false)
     @NotFound(action= NotFoundAction.IGNORE)
     private SysAuthority sysAuthority;//权限
+
+	public String getUserAuthorityId() {
+		return userAuthorityId;
+	}
+
+	public void setUserAuthorityId(String userAuthorityId) {
+		this.userAuthorityId = userAuthorityId;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getAuthorityId() {
+		return authorityId;
+	}
+
+	public void setAuthorityId(String authorityId) {
+		this.authorityId = authorityId;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public SysUser getSysUser() {
+		return sysUser;
+	}
+
+	public void setSysUser(SysUser sysUser) {
+		this.sysUser = sysUser;
+	}
+
+	public SysAuthority getSysAuthority() {
+		return sysAuthority;
+	}
+
+	public void setSysAuthority(SysAuthority sysAuthority) {
+		this.sysAuthority = sysAuthority;
+	}
+    
+    
 }

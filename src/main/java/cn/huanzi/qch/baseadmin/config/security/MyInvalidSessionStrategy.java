@@ -1,6 +1,8 @@
 package cn.huanzi.qch.baseadmin.config.security;
 
 import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.session.SessionInformation;
 import org.springframework.security.core.session.SessionRegistry;
@@ -12,14 +14,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.IOException;
 
 /**
  * 自定义session失效策略
  */
 @Component
-@Slf4j
+//@Slf4j
 public class MyInvalidSessionStrategy implements InvalidSessionStrategy {
+	private static final Logger log = getLogger(MyInvalidSessionStrategy.class);
     @Autowired
     private SessionRegistry sessionRegistry;
 

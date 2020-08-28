@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.session.SessionInformation;
@@ -19,6 +20,9 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -28,9 +32,9 @@ import java.util.HashMap;
  * 校验账号、密码前，先进行验证码处理，需要在这里进行登录解密操作
  */
 @Component
-@Slf4j
+//@Slf4j
 public class CaptchaFilterConfig implements Filter {
-
+	private static final Logger log = getLogger(CaptchaFilterConfig.class);
     @Value("${captcha.enable}")
     private Boolean captchaEnable;
 

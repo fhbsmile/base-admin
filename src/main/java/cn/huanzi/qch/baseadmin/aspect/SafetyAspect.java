@@ -16,11 +16,15 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
@@ -28,11 +32,11 @@ import java.text.SimpleDateFormat;
 /**
  * AES + RSA 加解密AOP处理
  */
-@Slf4j
+//@Slf4j
 @Aspect
 @Component
 public class SafetyAspect {
-
+	private static final Logger log = getLogger(SafetyAspect.class);
     /**
      * Pointcut 切入点
      * 匹配

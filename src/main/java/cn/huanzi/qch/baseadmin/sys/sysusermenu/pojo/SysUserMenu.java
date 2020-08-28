@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "sys_user_menu")
-@Data
+
 public class SysUserMenu implements Serializable {
     @Id
     private String userMenuId;//用户菜单表id
@@ -34,4 +34,62 @@ public class SysUserMenu implements Serializable {
     @JoinColumn(name = "menuId",referencedColumnName = "menuId", insertable = false, updatable = false)
     @NotFound(action= NotFoundAction.IGNORE)
     private SysMenu sysMenu;//菜单
+
+	public String getUserMenuId() {
+		return userMenuId;
+	}
+
+	public void setUserMenuId(String userMenuId) {
+		this.userMenuId = userMenuId;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getMenuId() {
+		return menuId;
+	}
+
+	public void setMenuId(String menuId) {
+		this.menuId = menuId;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public SysUser getSysUser() {
+		return sysUser;
+	}
+
+	public void setSysUser(SysUser sysUser) {
+		this.sysUser = sysUser;
+	}
+
+	public SysMenu getSysMenu() {
+		return sysMenu;
+	}
+
+	public void setSysMenu(SysMenu sysMenu) {
+		this.sysMenu = sysMenu;
+	}
+    
+    
 }

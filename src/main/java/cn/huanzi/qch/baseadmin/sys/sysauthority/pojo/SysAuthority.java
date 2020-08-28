@@ -22,4 +22,52 @@ public class SysAuthority implements Serializable {
 
     private Date updateTime;//修改时间
 
+	public String getAuthorityId() {
+		return authorityId;
+	}
+
+	public void setAuthorityId(String authorityId) {
+		this.authorityId = authorityId;
+	}
+
+	public String getAuthorityName() {
+		return authorityName;
+	}
+
+	public void setAuthorityName(String authorityName) {
+		this.authorityName = authorityName;
+	}
+
+	public String getAuthorityContent() {
+		return authorityContent;
+	}
+
+	public void setAuthorityContent(String authorityContent) {
+		this.authorityContent = authorityContent;
+	}
+
+	public String getAuthorityRemark() {
+		return authorityRemark;
+	}
+
+	public void setAuthorityRemark(String authorityRemark) {
+		this.authorityRemark = authorityRemark;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
 }

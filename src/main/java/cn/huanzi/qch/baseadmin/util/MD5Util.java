@@ -2,15 +2,19 @@ package cn.huanzi.qch.baseadmin.util;
 
 import lombok.extern.slf4j.Slf4j;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+
+import org.slf4j.Logger;
 
 /**
  * MD5 工具类
  */
-@Slf4j
+//@Slf4j
 public class MD5Util {
-
+	private static final Logger log = getLogger(MD5Util.class);
     /**
      * 生成MD5加密串
      */

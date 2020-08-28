@@ -1,15 +1,18 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import lombok.extern.slf4j.Slf4j;
+
+import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.*;
+
+import org.slf4j.Logger;
 
 /**
  * byte数组工具类
  */
-@Slf4j
+//@Slf4j
 public class ByteUtil {
-
+	private static final Logger log = getLogger(ByteUtil.class);
     /**
      * 二进制转十六进制
      */

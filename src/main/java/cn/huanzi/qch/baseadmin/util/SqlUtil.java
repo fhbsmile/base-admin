@@ -4,12 +4,16 @@ import cn.huanzi.qch.baseadmin.annotation.Between;
 import cn.huanzi.qch.baseadmin.annotation.In;
 import cn.huanzi.qch.baseadmin.annotation.Like;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.annotation.Transient;
 import org.springframework.util.StringUtils;
 
 import javax.persistence.Table;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -19,9 +23,9 @@ import java.util.List;
 /**
  * 拼接SQL工具类
  */
-@Slf4j
+//@Slf4j
 public class SqlUtil {
-
+	private static final Logger log = getLogger(SqlUtil.class);
     /**
      * 数据库驱动类，用于判断数据库类型
      * MySQL：com.mysql.jdbc.Driver

@@ -9,6 +9,7 @@ import cn.huanzi.qch.baseadmin.util.ErrorUtil;
 import cn.huanzi.qch.baseadmin.util.UUIDUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.NotFound;
+import org.slf4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -16,6 +17,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.util.StringUtils;
 
 import javax.persistence.Id;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -31,9 +35,9 @@ import java.util.Optional;
  * @param <E> 实体类
  * @param <T> id主键类型
  */
-@Slf4j
+//@Slf4j
 public class CommonServiceImpl<V, E, T> implements CommonService<V, E, T> {
-
+	private static final Logger log = getLogger(CommonServiceImpl.class);
     private Class<V> entityVoClass;//实体类Vo
 
     private Class<E> entityClass;//实体类

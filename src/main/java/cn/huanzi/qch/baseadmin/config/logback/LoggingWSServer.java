@@ -4,12 +4,17 @@ package cn.huanzi.qch.baseadmin.config.logback;
 import cn.huanzi.qch.baseadmin.config.websocket.MyEndpointConfigure;
 import cn.huanzi.qch.baseadmin.util.ErrorUtil;
 import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.util.StringUtils;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,11 +29,11 @@ import java.util.regex.Pattern;
 /**
  * WebSocket获取实时日志并输出到Web页面
  */
-@Slf4j
+//@Slf4j
 @Component
 @ServerEndpoint(value = "/websocket/logging", configurator = MyEndpointConfigure.class)
 public class LoggingWSServer {
-
+	private static final Logger log = getLogger(LoggingWSServer.class);
     @Value("${spring.application.name}")
     private String applicationName;
 

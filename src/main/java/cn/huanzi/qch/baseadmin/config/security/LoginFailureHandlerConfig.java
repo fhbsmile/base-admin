@@ -8,12 +8,16 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -22,8 +26,9 @@ import java.text.SimpleDateFormat;
  * 登录失败处理
  */
 @Component
-@Slf4j
+//@Slf4j
 public class LoginFailureHandlerConfig implements AuthenticationFailureHandler {
+	private static final Logger log = getLogger(LoginFailureHandlerConfig.class);
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException {
         String msg = "{\"code\":\"400\",\"msg\":\"用户名或密码错误\"}";

@@ -1,10 +1,14 @@
 package cn.huanzi.qch.baseadmin.util;
 
 
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
 
 import javax.crypto.Cipher;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.ByteArrayOutputStream;
 import java.security.Key;
 import java.security.KeyFactory;
@@ -21,9 +25,9 @@ import java.util.Map;
 /**
  * RSA加、解密算法工具类
  */
-@Slf4j
+//@Slf4j
 public class RsaUtil {
-
+	private static final Logger log = getLogger(RsaUtil.class);
     /**
      * 加密算法AES
      */

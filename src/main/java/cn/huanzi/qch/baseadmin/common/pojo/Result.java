@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 统一返回对象
  */
 
-@Data
+//@Data
 public class Result<T> implements Serializable {
     /**
      * 通信数据
@@ -57,5 +57,29 @@ public class Result<T> implements Serializable {
         this.flag = flag;
         this.msg = msg;
     }
+
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
 
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
@@ -24,6 +25,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -36,8 +40,9 @@ import java.util.List;
  * 登录成功处理，登陆成功后还需要验证账号的有效性
  */
 @Component
-@Slf4j
+//@Slf4j
 public class LoginSuccessHandlerConfig implements AuthenticationSuccessHandler {
+	private static final Logger log = getLogger(LoginSuccessHandlerConfig.class);
     @Autowired
     private SessionRegistry sessionRegistry;
 

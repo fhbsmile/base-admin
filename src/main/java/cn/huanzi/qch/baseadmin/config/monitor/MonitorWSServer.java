@@ -7,11 +7,16 @@ import cn.huanzi.qch.baseadmin.util.SystemMonitorUtil;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
+
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -19,11 +24,11 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * WebSocket获取实时系统监控并输出到Web页面
  */
-@Slf4j
+//@Slf4j
 @Component
 @ServerEndpoint(value = "/websocket/monitor", configurator = MyEndpointConfigure.class)
 public class MonitorWSServer {
-
+	private static final Logger log = getLogger(MonitorWSServer.class);
     @Value("${spring.application.name}")
     private String applicationName;
 

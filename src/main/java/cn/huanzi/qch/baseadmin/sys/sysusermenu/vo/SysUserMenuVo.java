@@ -8,7 +8,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-@Data
+//@Data
 public class SysUserMenuVo extends PageCondition implements Serializable {
     private String userMenuId;//用户菜单表id
 
@@ -25,4 +25,70 @@ public class SysUserMenuVo extends PageCondition implements Serializable {
     private Date updateTime;//修改时间
 
     private String menuIdList;////新增、修改用户菜单时菜单id集合
+
+	public String getUserMenuId() {
+		return userMenuId;
+	}
+
+	public void setUserMenuId(String userMenuId) {
+		this.userMenuId = userMenuId;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getMenuId() {
+		return menuId;
+	}
+
+	public void setMenuId(String menuId) {
+		this.menuId = menuId;
+	}
+
+	public SysUserVo getSysUser() {
+		return sysUser;
+	}
+
+	public void setSysUser(SysUserVo sysUser) {
+		this.sysUser = sysUser;
+	}
+
+	public SysMenuVo getSysMenu() {
+		return sysMenu;
+	}
+
+	public void setSysMenu(SysMenuVo sysMenu) {
+		this.sysMenu = sysMenu;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getMenuIdList() {
+		return menuIdList;
+	}
+
+	public void setMenuIdList(String menuIdList) {
+		this.menuIdList = menuIdList;
+	}
+    
+    
 }
